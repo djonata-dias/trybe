@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.4</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 4.4 - JavaEscripito </h1>
+    <h2></h2>
+    <h2></h2>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        function chageDescription(text){
+            document.getElementsByTagName('p')[1].innerHTML = text;
+        };
+        function changeColor(element , color){
+            document.getElementsByClassName(element)[0].style.backgroundColor = color;
+        };
+        function changeText (element, text){
+            document.querySelector(element).innerHTML = text
+        }
+        function changeAllTexts (querry, text) {
+            elements = document.querySelectorAll(querry);
+            for(let i in elements){
+                elements[i].innerHTML = text;
+            }
+        }
+        function changeAllTags (tagName) {
+            text = document.getElementsByTagName(tagName);
+            for(let i in text){
+                text[i].innerHTML = text[i].innerHTML.toUpperCase();
+            }
+        }
+
+        chageDescription("Eu quero estar no Canadá");
+        changeColor('main-content','#0FA36B');
+        changeColor('center-content', 'white');
+        changeText('h1', 'Exercício 4.4 - JavaScript');
+        changeAllTexts('h2', '123');
+        changeAllTags('p')
+
+
+        
+     
+    </script>
+  </body>
+</html>
