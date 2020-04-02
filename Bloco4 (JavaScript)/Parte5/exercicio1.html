@@ -2,7 +2,21 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <title></title>
+  <title>Exercicio 1</title>
+  <script>
+      window.onload = function(){
+        let noun = document.querySelector('#noun');
+        let adjective = document.querySelector('#adjective');
+        let person = document.querySelector('#person');
+        let story = document.querySelector('#story');
+        function makeMadLib (){
+            story.innerHTML = noun.value + ' ' + adjective.value + ' ' + person.value
+        }
+
+        document.querySelector('#lib-button').addEventListener('click', makeMadLib)
+
+      }
+</script>
  </head>
  <body>
  
