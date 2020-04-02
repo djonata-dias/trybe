@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho">filho</div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho">filho</div>
+            <div id="segundoEUltimoFilhoDoFilho">ultimo filhodo filho</div>
+          </div>
+          Atenção!
+          <div id="terceiroFilho">filho</div>
+          <div id="quartoEUltimoFilho"></div>
+        </div>
+      </div>
+      <script>
+          let elemento1 = document.querySelector('#elementoOndeVoceEsta'); // 1
+          elemento1.parentNode.style.color = "red"; // 2
+          let pai = document.querySelector('#pai');
+          let filho1Elemento1 = elemento1.childNodes[1].innerHTML = "Filho do filho do pai"; //3
+          let primeiroFilhoPai = pai.childNodes[1].innerHTML = 'Primeiro filho' // 4
+          elemento1.previousElementSibling.innerHTML = 'Passo 5'; // 5
+          elemento1.nextSibling.nodeValue = 'Elemento onde você está'; // 6
+          let irmao3 = elemento1.nextElementSibling.innerHTML = 'Irmão3'; // 7
+         let filho3 = pai.childNodes[5].innerHTML = 'Filho3'
+          
+      </script>
+</body>
+</html>
