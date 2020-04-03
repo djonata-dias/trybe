@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Calculator</title>
+  <script>
+    window.onload = function () {
+
+
+      function quadrado(num) {
+        return (num * num);
+      }
+      function half(num) {
+        return num / 2;
+      }
+      function porCento(num1, num2) {
+        return (num1 / num2) / 100;
+      }
+      function area(num) {
+        return Math.PI * quadrado(num)
+      }
+
+      let percent1Imput = document.querySelector('#percent1-input');
+      let percent2Imput = document.querySelector('#percent2-input');
+      let percentButton = document.querySelector('#percent-button');
+      let areaImput = document.querySelector('#area-input');
+      let areaButton = document.querySelector('#area-button');
+      var solution = document.getElementById('solution')
+
+      document.getElementById('square-button').addEventListener('click', function () {
+        var squareImput = document.getElementById('square-input').value;
+        console.log(quadrado(squareImput));
+        solution.innerHTML = quadrado(squareImput)
+      })
+
+      document.getElementById('half-button');.addEventListener('mouseover', function () {
+        var halfImput = document.getElementById('half-input').value;
+        solution.innerHTML = half(halfImput)
+      })
+
+      percentButton.addEventListener('mouseover', function () {
+
+      })
+
+      areaButton.addEventListener('mouseover', function () {
+
+      })
+
+    }
+  </script>
+</head>
+
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button>
+  <br><br>
+  <div id="solution"></div>
+
+
+</body>
+
+</html>
