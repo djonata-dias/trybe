@@ -1,9 +1,12 @@
 body {
-
+    font-size: x-large  ;
+    margin: 10px;
 }
+
 h1 {
-
+    font-size: medium;
 }
+
 h2 {
 
 }
@@ -13,5 +16,10 @@ img {
 }
 
 figure {
-	margin: 0;
+	margin: 40px;
+}
+
+.quadro-fotos {
+    display: flex;
+    flex-flow: wrap
 }
