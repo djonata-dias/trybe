@@ -1,18 +1,16 @@
 import { createStore } from 'redux';
-import { MOVE_CAR } from './actionCreators';
+import { CHANGE_SIGNAL } from './actionCreators';
 
 const initialState = {
-  cars: {
-    red: false,
-    blue: false,
-    yellow: false,
+  signal: {
+    color: 'red',
   },
-};
+}
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case MOVE_CAR:
-      return { ...state, cars: { ...state.cars, [action.car]: action.side } };
+    case CHANGE_SIGNAL:
+      return { ...state, signal: { ...state.signal, color: action.payload } };
     default:
       return state;
   }
